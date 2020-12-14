@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/', 'BerandaController@welcome');
 
 Route::get('/about', 'BerandaController@about');
+Route::get('/quotes', 'BerandaController@quotes');
 
 Route::get('/help', 'BerandaController@help');
 Route::get('/goals', 'GoalController@index');
@@ -30,3 +31,7 @@ Route::post('/goals', 'GoalController@store');
 Route::get('goals/{goal}/edit', 'GoalController@edit');
 Route::put('goals/{goal}', 'GoalController@update');
 Route::get('/goals/{goal}/delete', 'GoalController@delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

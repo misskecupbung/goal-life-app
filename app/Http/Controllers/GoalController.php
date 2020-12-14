@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Goal;
+use File;
+
 
 class GoalController extends Controller
 {
+
+    public function __construct(){
+          $this->middleware('admin');
+    }
+
     public function index()
     {
         $goals = Goal::all();

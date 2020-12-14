@@ -14,6 +14,10 @@ class BerandaController extends Controller
         return view('goals');
     }
 
+    public function quotes(){
+        return view('quotes');
+    }
+
     public function about(){
         return view('about');
     }
